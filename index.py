@@ -1,8 +1,9 @@
 from flask import Flask,jsonify
-
+import rasterio
+import calculate_raster
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    d = {"a":2}
-    return jsonify(d)
+    citra = calculate_raster.getScenes()
+    return jsonify(citra)
