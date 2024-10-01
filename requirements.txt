@@ -1,0 +1,4 @@
+matplotlib
+rasterio
+flask
+numpy
