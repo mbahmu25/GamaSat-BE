@@ -1,7 +1,3 @@
-print("tes push")
-
-pip install rasterio numpy matplotlib
-
 import rasterio
 import matplotlib.pyplot as plt
 import numpy as np

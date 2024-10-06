@@ -117,13 +117,14 @@ def satellite_position_at_time(t, t0):
     return latitude_deg, longitude_deg, altitude
 
 # Calculate the satellite's position at the current time
-t0 = datetime(2024, 10, 1, 12, 8, 26)
-t = datetime.utcnow()  # Current time
+def satNow():    
+    t0 = datetime(2024, 10, 1, 12, 8, 26)
+    t = datetime.utcnow()  # Current time
 
-# Calculate satellite's latitude, longitude, and altitude
-latitude, longitude, altitude = satellite_position_at_time(t, t0)
-
+    # Calculate satellite's latitude, longitude, and altitude
+    latitude, longitude, altitude = satellite_position_at_time(t, t0)
+    return latitude,longitude,altitude,t
 # Output
-print(f"Latitude: {latitude:.6f}°")
-print(f"Longitude: {longitude:.6f}°")
-print(f"Altitude: {altitude:.2f} km")
+# print(f"Latitude: {latitude:.6f}°")
+# print(f"Longitude: {longitude:.6f}°")
+# print(f"Altitude: {altitude:.2f} km")
